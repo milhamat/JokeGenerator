@@ -53,6 +53,7 @@ class JokeMainView: UIView {
         let button = UIButton(type: UIButton.ButtonType.custom)
         let image = UIImage(named: "GenerateBut")
         button.setImage(image, for: .normal)
+//        button.setTitle("gen", for: .normal)
         return button
     }()
     
@@ -60,6 +61,7 @@ class JokeMainView: UIView {
         let button = UIButton(type: UIButton.ButtonType.custom)
         let image = UIImage(named: "AnswerBut")
         button.setImage(image, for: .normal)
+//        button.setTitle("ans", for: .normal)
         return button
     }()
     

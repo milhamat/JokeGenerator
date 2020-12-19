@@ -11,9 +11,11 @@
 		DA454CA7258DF04200F66F01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA454CA6258DF04200F66F01 /* SceneDelegate.swift */; };
 		DA454CAE258DF04200F66F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA454CAD258DF04200F66F01 /* Assets.xcassets */; };
 		DA454CB1258DF04200F66F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA454CAF258DF04200F66F01 /* LaunchScreen.storyboard */; };
-		DA874B20258E396D00D6A280 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B1F258E396D00D6A280 /* JokeModel.swift */; };
+		DA874B20258E396D00D6A280 /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B1F258E396D00D6A280 /* JokeData.swift */; };
 		DA874B23258E399D00D6A280 /* JokeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B22258E399D00D6A280 /* JokeMainView.swift */; };
 		DA874B27258E3A0300D6A280 /* JokeMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B26258E3A0300D6A280 /* JokeMainController.swift */; };
+		DA874B2A258E4F7400D6A280 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B29258E4F7400D6A280 /* JokeModel.swift */; };
+		DA874B2D258E4F8000D6A280 /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B2C258E4F8000D6A280 /* JokeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +25,11 @@
 		DA454CAD258DF04200F66F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA454CB0258DF04200F66F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA454CB2258DF04200F66F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA874B1F258E396D00D6A280 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		DA874B1F258E396D00D6A280 /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
 		DA874B22258E399D00D6A280 /* JokeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeMainView.swift; sourceTree = "<group>"; };
 		DA874B26258E3A0300D6A280 /* JokeMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeMainController.swift; sourceTree = "<group>"; };
+		DA874B29258E4F7400D6A280 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		DA874B2C258E4F8000D6A280 /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 		DA874B1C258E38E200D6A280 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA874B1F258E396D00D6A280 /* JokeModel.swift */,
+				DA874B1F258E396D00D6A280 /* JokeData.swift */,
+				DA874B29258E4F7400D6A280 /* JokeModel.swift */,
+				DA874B2C258E4F8000D6A280 /* JokeManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA874B27258E3A0300D6A280 /* JokeMainController.swift in Sources */,
-				DA874B20258E396D00D6A280 /* JokeModel.swift in Sources */,
+				DA874B20258E396D00D6A280 /* JokeData.swift in Sources */,
 				DA454CA5258DF04200F66F01 /* AppDelegate.swift in Sources */,
 				DA874B23258E399D00D6A280 /* JokeMainView.swift in Sources */,
+				DA874B2A258E4F7400D6A280 /* JokeModel.swift in Sources */,
 				DA454CA7258DF04200F66F01 /* SceneDelegate.swift in Sources */,
+				DA874B2D258E4F8000D6A280 /* JokeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

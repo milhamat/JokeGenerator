@@ -42,11 +42,25 @@ class JokeMainView: UIView {
     }()
     
     let detailAnswerLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "A....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.textColor = .black
         return label
+    }()
+    
+    let generateButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        let image = UIImage(named: "GenerateBut")
+        button.setImage(image, for: .normal)
+        return button
+    }()
+    
+    let answerButton: UIButton = {
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        let image = UIImage(named: "AnswerBut")
+        button.setImage(image, for: .normal)
+        return button
     }()
     
     override init(frame: CGRect) {
@@ -64,16 +78,18 @@ class JokeMainView: UIView {
         self.addSubview(self.containerView)
         self.containerView.addSubview(self.questionLabel)
         self.containerView.addSubview(self.detailQuestionLabel)
-        
         self.containerView.addSubview(self.answerLabel)
         self.containerView.addSubview(self.detailAnswerLabel)
+        self.addSubview(self.generateButton)
+        self.addSubview(self.answerButton)
         
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-            containerView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            containerView.heightAnchor.constraint(equalToConstant: 419),
-            containerView.widthAnchor.constraint(equalToConstant: 363)
+            containerView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 50),
+            containerView.heightAnchor.constraint(equalToConstant: self.frame.size.height * 0.47),
+            containerView.widthAnchor.constraint(equalToConstant: self.frame.size.width * 0.88)
+            // H: 419, W: 363
         ])
         
         questionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -102,6 +118,18 @@ class JokeMainView: UIView {
             detailAnswerLabel.leftAnchor.constraint(equalTo: self.containerView.leftAnchor, constant: 12),
             detailAnswerLabel.rightAnchor.constraint(equalTo: self.containerView.rightAnchor, constant: -12),
             detailAnswerLabel.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        generateButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            generateButton.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 150),
+            generateButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 80)
+        ])
+        
+        answerButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            answerButton.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 150),
+            answerButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -80)
         ])
     }
 }

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		DA454CA5258DF04200F66F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA454CA4258DF04200F66F01 /* AppDelegate.swift */; };
 		DA454CA7258DF04200F66F01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA454CA6258DF04200F66F01 /* SceneDelegate.swift */; };
-		DA454CA9258DF04200F66F01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA454CA8258DF04200F66F01 /* ViewController.swift */; };
-		DA454CAC258DF04200F66F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA454CAA258DF04200F66F01 /* Main.storyboard */; };
 		DA454CAE258DF04200F66F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA454CAD258DF04200F66F01 /* Assets.xcassets */; };
 		DA454CB1258DF04200F66F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA454CAF258DF04200F66F01 /* LaunchScreen.storyboard */; };
+		DA874B20258E396D00D6A280 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B1F258E396D00D6A280 /* JokeModel.swift */; };
+		DA874B23258E399D00D6A280 /* JokeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B22258E399D00D6A280 /* JokeMainView.swift */; };
+		DA874B27258E3A0300D6A280 /* JokeMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA874B26258E3A0300D6A280 /* JokeMainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA454CA1258DF04200F66F01 /* JokeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA454CA4258DF04200F66F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA454CA6258DF04200F66F01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA454CA8258DF04200F66F01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA454CAB258DF04200F66F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA454CAD258DF04200F66F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA454CB0258DF04200F66F01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA454CB2258DF04200F66F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA874B1F258E396D00D6A280 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		DA874B22258E399D00D6A280 /* JokeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeMainView.swift; sourceTree = "<group>"; };
+		DA874B26258E3A0300D6A280 /* JokeMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeMainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,38 @@
 			children = (
 				DA454CA4258DF04200F66F01 /* AppDelegate.swift */,
 				DA454CA6258DF04200F66F01 /* SceneDelegate.swift */,
-				DA454CA8258DF04200F66F01 /* ViewController.swift */,
-				DA454CAA258DF04200F66F01 /* Main.storyboard */,
+				DA874B1C258E38E200D6A280 /* Model */,
+				DA874B1B258E38D900D6A280 /* View */,
+				DA874B1D258E38E800D6A280 /* Controller */,
 				DA454CAD258DF04200F66F01 /* Assets.xcassets */,
 				DA454CAF258DF04200F66F01 /* LaunchScreen.storyboard */,
 				DA454CB2258DF04200F66F01 /* Info.plist */,
 			);
 			path = JokeGenerator;
+			sourceTree = "<group>";
+		};
+		DA874B1B258E38D900D6A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA874B22258E399D00D6A280 /* JokeMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA874B1C258E38E200D6A280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA874B1F258E396D00D6A280 /* JokeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA874B1D258E38E800D6A280 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA874B26258E3A0300D6A280 /* JokeMainController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +153,6 @@
 			files = (
 				DA454CB1258DF04200F66F01 /* LaunchScreen.storyboard in Resources */,
 				DA454CAE258DF04200F66F01 /* Assets.xcassets in Resources */,
-				DA454CAC258DF04200F66F01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA454CA9258DF04200F66F01 /* ViewController.swift in Sources */,
+				DA874B27258E3A0300D6A280 /* JokeMainController.swift in Sources */,
+				DA874B20258E396D00D6A280 /* JokeModel.swift in Sources */,
 				DA454CA5258DF04200F66F01 /* AppDelegate.swift in Sources */,
+				DA874B23258E399D00D6A280 /* JokeMainView.swift in Sources */,
 				DA454CA7258DF04200F66F01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +174,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA454CAA258DF04200F66F01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA454CAB258DF04200F66F01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA454CAF258DF04200F66F01 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -28,6 +28,7 @@ class JokeMainView: UIView {
         let label = UILabel()
         label.text = "A....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.numberOfLines = 0
         label.textColor = .black
 //        label.textAlignment = .left
         return label
@@ -45,6 +46,7 @@ class JokeMainView: UIView {
         let label = UILabel()
         label.text = "A....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.numberOfLines = 0
         label.textColor = .black
         return label
     }()

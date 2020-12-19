@@ -29,6 +29,7 @@ class JokeMainView: UIView {
         label.text = "A....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.textColor = .black
+//        label.textAlignment = .left
         return label
     }()
     
@@ -64,6 +65,9 @@ class JokeMainView: UIView {
         self.containerView.addSubview(self.questionLabel)
         self.containerView.addSubview(self.detailQuestionLabel)
         
+        self.containerView.addSubview(self.answerLabel)
+        self.containerView.addSubview(self.detailAnswerLabel)
+        
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
@@ -84,6 +88,20 @@ class JokeMainView: UIView {
             detailQuestionLabel.leftAnchor.constraint(equalTo: self.containerView.leftAnchor, constant: 12),
             detailQuestionLabel.rightAnchor.constraint(equalTo: self.containerView.rightAnchor, constant: -12),
             detailQuestionLabel.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        answerLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            answerLabel.topAnchor.constraint(equalTo: detailQuestionLabel.bottomAnchor, constant: 20),
+            answerLabel.leftAnchor.constraint(equalTo: self.containerView.leftAnchor,constant: 12)
+        ])
+        
+        detailAnswerLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            detailAnswerLabel.topAnchor.constraint(equalTo: answerLabel.bottomAnchor, constant: 12),
+            detailAnswerLabel.leftAnchor.constraint(equalTo: self.containerView.leftAnchor, constant: 12),
+            detailAnswerLabel.rightAnchor.constraint(equalTo: self.containerView.rightAnchor, constant: -12),
+            detailAnswerLabel.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

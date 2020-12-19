@@ -26,7 +26,7 @@ class JokeMainView: UIView {
     
     let detailQuestionLabel: UILabel = {
         let label = UILabel()
-        label.text = "A....."
+        label.text = "....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 0
         label.textColor = .black
@@ -44,7 +44,7 @@ class JokeMainView: UIView {
     
     let detailAnswerLabel: UILabel = {
         let label = UILabel()
-        label.text = "A....."
+        label.text = "....."
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 0
         label.textColor = .black
@@ -85,7 +85,7 @@ class JokeMainView: UIView {
         self.containerView.addSubview(self.answerLabel)
         self.containerView.addSubview(self.detailAnswerLabel)
         self.addSubview(self.generateButton)
-        self.addSubview(self.answerButton)
+//        self.addSubview(self.answerButton)
         
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -127,13 +127,14 @@ class JokeMainView: UIView {
         generateButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             generateButton.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 150),
-            generateButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 80)
+            generateButton.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor)
+//            generateButton.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 80)
         ])
         
-        answerButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            answerButton.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 150),
-            answerButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -80)
-        ])
+//        answerButton.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            answerButton.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 150),
+//            answerButton.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -80)
+//        ])
     }
 }

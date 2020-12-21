@@ -66,8 +66,10 @@
 				DA454CA6258DF04200F66F01 /* SceneDelegate.swift */,
 				DA874B1C258E38E200D6A280 /* Model */,
 				DA874B1B258E38D900D6A280 /* View */,
+				DA874B512590566B00D6A280 /* ViewModel */,
 				DA874B1D258E38E800D6A280 /* Controller */,
 				DA454CAD258DF04200F66F01 /* Assets.xcassets */,
+				DA874B522590568C00D6A280 /* Service */,
 				DA454CAF258DF04200F66F01 /* LaunchScreen.storyboard */,
 				DA454CB2258DF04200F66F01 /* Info.plist */,
 			);
@@ -86,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				DA874B1F258E396D00D6A280 /* JokeData.swift */,
-				DA874B29258E4F7400D6A280 /* JokeModel.swift */,
-				DA874B2C258E4F8000D6A280 /* JokeManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +98,22 @@
 				DA874B26258E3A0300D6A280 /* JokeMainController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA874B512590566B00D6A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA874B29258E4F7400D6A280 /* JokeModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA874B522590568C00D6A280 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DA874B2C258E4F8000D6A280 /* JokeManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
